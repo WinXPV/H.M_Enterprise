@@ -4,6 +4,10 @@
 <link rel="icon" href="https://i.imgur.com/WMUS6Vs.jpg" type="image/png" sizes="16x16">
 <title>Reg. Book (H.M Enterprise)</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto+Slab&display=swap" rel="stylesheet">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -11,39 +15,59 @@ $(document).ready(function(){
     $("#account-pg").show();
     $("#client-pg").hide();
     $("#agency-pg").hide();
+    $("#home-pg").hide();
   });
 
   $("#client").click(function(){
     $("#client-pg").show();
     $("#account-pg").hide();
     $("#agency-pg").hide();
+    $("#home-pg").hide();
   });
 
   $("#agency").click(function(){
     $("#agency-pg").show();
     $("#account-pg").hide();
     $("#client-pg").hide();
+    $("#home-pg").hide();
+  });
+
+  $("#home").click(function(){
+    $("#home-pg").show();
+    $("#account-pg").hide();
+    $("#client-pg").hide();
+    $("#agency-pg").hide();
   });
 });
 </script>
 
 <style>
 .btn {z-index:1; position:absolute; bottom:60px; right:15px; border:0px solid red;}
-.btn button {cursor:pointer; margin-top:5px; font-size:16px; background:#5c5c5c; color:white; border-radius:15px 0px; border:2px solid #5c5c5c; padding:5px;}
-.btn button:hover {color:#5c5c5c; background:white; transition:0.2s;}
+.btn button {cursor:pointer; margin-top:5px; font-size:16px; background:#717171; color:white; border-radius:15px 0px; border:2px solid #717171; padding:5px; font-family:'Comfortaa', cursive;}
+.btn button:hover {color:IndianRed; background:white; transition:0.2s; border:2px solid IndianRed; border-radius:0px 15px;}
 </style>
 
 </head>
 
 <body>
 
+<div id="home-pg" style="border:0px solid red;">
+<div style="width:100%; text-align:center; font-family:'Roboto Slab', serif; font-size:50px; font-weight:bold; color:gray;">
+<br/><img src="https://i.imgur.com/WMUS6Vs.jpg" width="50" />
+<br/>H.M Enterprise
+<br/><span style="font-family:'Comfortaa'; font-size:25px; color:#6aa84f;">RL No. 365</span>
+<br/><br/><br/><br/><div align="center" style="font-family:'Comfortaa'; font-size:16px; color:gray; font-weight:normal; line-height:22px;"><div style="width:30%; border-top:1px solid gray;"></div><br/>168, Shaheed Sayed Nazrul Islam Saranee<br/>Purana Paltan (Bijoy Nagar)<br/>Dhaka-1000<br/>E-mail: rkmamunkhan@gmail.com</div>
+</div>
+</div>
+
 <div class="btn" align="right">
 <button id="account">Account Summary</button><br/>
 <button id="client">Client_Ref</button><br/>
 <button id="agency">Agency (Processing)</button><br/>
+<button id="home">Home</button>
 </div>
 
-<iframe id="account-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/12c2g0-V0T2J-2BQOtzJztsFrmxOAbq9qi3LexuE5sA8/edit?usp=sharing"></iframe>
+<iframe id="account-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none; display:none;" src="https://docs.google.com/spreadsheets/d/12c2g0-V0T2J-2BQOtzJztsFrmxOAbq9qi3LexuE5sA8/edit?usp=sharing"></iframe>
 <iframe id="client-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none; display:none;" src="https://docs.google.com/spreadsheets/d/1lAg-2wLuCutLeqbfI0itWA53UFnzmcOWAnvAbtW2JCU/edit?usp=sharing"></iframe>
 <iframe id="agency-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none; display:none;" src="https://docs.google.com/spreadsheets/d/1pmVjivbCDJOIOzPhQN1OKCmQL1BeobXvPT69CFd1hek/edit?usp=sharing"></iframe>
 
