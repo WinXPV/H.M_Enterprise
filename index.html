@@ -15,6 +15,7 @@ $(document).ready(function(){
     $("#account-pg").show();
     $("#client-pg").hide();
     $("#agency-pg").hide();
+    $("#pax-pg").hide();
     $("#home-pg").hide();
   });
 
@@ -22,6 +23,7 @@ $(document).ready(function(){
     $("#client-pg").show();
     $("#account-pg").hide();
     $("#agency-pg").hide();
+    $("#pax-pg").hide();
     $("#home-pg").hide();
   });
 
@@ -29,6 +31,15 @@ $(document).ready(function(){
     $("#agency-pg").show();
     $("#account-pg").hide();
     $("#client-pg").hide();
+    $("#pax-pg").hide();
+    $("#home-pg").hide();
+  });
+
+  $("#pax").click(function(){
+    $("#pax-pg").show();
+    $("#account-pg").hide();
+    $("#client-pg").hide();
+    $("#agency-pg").hide();
     $("#home-pg").hide();
   });
 
@@ -36,6 +47,7 @@ $(document).ready(function(){
     $("#home-pg").show();
     $("#account-pg").hide();
     $("#client-pg").hide();
+    $("#pax-pg").hide();
     $("#agency-pg").hide();
   });
 });
@@ -64,12 +76,14 @@ $(document).ready(function(){
 <button id="account">Account Summary</button><br/>
 <button id="client">Client_Ref</button><br/>
 <button id="agency">Agency (Processing)</button><br/>
+<button id="pax">Pax Record</button><br/>
 <button id="home">Home</button>
 </div>
 
 <iframe id="account-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none; display:none;" src="https://docs.google.com/spreadsheets/d/12c2g0-V0T2J-2BQOtzJztsFrmxOAbq9qi3LexuE5sA8/edit?usp=sharing"></iframe>
 <iframe id="client-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none; display:none;" src="https://docs.google.com/spreadsheets/d/1lAg-2wLuCutLeqbfI0itWA53UFnzmcOWAnvAbtW2JCU/edit?usp=sharing"></iframe>
 <iframe id="agency-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none; display:none;" src="https://docs.google.com/spreadsheets/d/1pmVjivbCDJOIOzPhQN1OKCmQL1BeobXvPT69CFd1hek/edit?usp=sharing"></iframe>
+<iframe id="pax-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none; display:none;" src="https://docs.google.com/spreadsheets/d/1TCtAjoez5lPqV8TmZtao3mMlrQDaistYiJxVywXgP58/edit?usp=sharing"></iframe>
 
 </body>
 </html>
