@@ -13,6 +13,8 @@
 $(document).ready(function(){
   $("#account").click(function(){
     $("#account-pg").show();
+    $("#imp-link-btn").show();
+    $("#imp-link-btn-cls").hide();
     $("#client-pg").hide();
     $("#agency-pg").hide();
     $("#pax-pg").hide();
@@ -22,6 +24,8 @@ $(document).ready(function(){
 
   $("#client").click(function(){
     $("#client-pg").show();
+    $("#imp-link-btn").show();
+    $("#imp-link-btn-cls").hide();
     $("#account-pg").hide();
     $("#agency-pg").hide();
     $("#pax-pg").hide();
@@ -31,6 +35,8 @@ $(document).ready(function(){
 
   $("#agency").click(function(){
     $("#agency-pg").show();
+    $("#imp-link-btn").show();
+    $("#imp-link-btn-cls").hide();
     $("#account-pg").hide();
     $("#client-pg").hide();
     $("#pax-pg").hide();
@@ -40,6 +46,8 @@ $(document).ready(function(){
 
   $("#pax").click(function(){
     $("#pax-pg").show();
+    $("#imp-link-btn").show();
+    $("#imp-link-btn-cls").hide();
     $("#account-pg").hide();
     $("#client-pg").hide();
     $("#agency-pg").hide();
@@ -49,11 +57,25 @@ $(document).ready(function(){
 
   $("#home").click(function(){
     $("#home-pg").show();
+    $("#imp-link-cont").show();
     $("#account-pg").hide();
     $("#client-pg").hide();
     $("#pax-pg").hide();
     $("#agency-pg").hide();
-    $("#imp-link-cont").show();
+    $("#imp-link-btn").hide();
+    $("#imp-link-btn-cls").hide();
+  });
+
+  $("#imp-link-btn").click(function(){
+    $("#imp-link-cont").show(300);
+    $("#imp-link-btn-cls").show(300);
+    $("#imp-link-btn").hide();
+  });
+
+  $("#imp-link-btn-cls").click(function(){
+    $("#imp-link-cont").hide(300);
+    $("#imp-link-btn-cls").hide();
+    $("#imp-link-btn").show(300);
   });
 });
 </script>
@@ -119,6 +141,9 @@ $(document).ready(function(){
 <li style="background:url(https://i.imgur.com/tU2wiPR.png) 0px 2px no-repeat; background-size:13px"><a href="https://online.immi.gov.au/evo/firstParty?actionType=query" target="_blank">Visa Check (Australia)</a></li>
 </ul>
 </div>
+
+<div id="imp-link-btn" style="z-index:2; position:absolute; bottom:0px; left:-11px; background:gray; width:20px; height:35px; border-radius:10px; cursor:pointer; display:none;"></div>
+<button id="imp-link-btn-cls" style="z-index:3; position:absolute; bottom:0px; left:-11px; background:IndianRed; width:20px; height:35px; border-radius:10px; cursor:pointer; border:none; font-family:'Comfortaa'; font-weight:bold; font-size:16px; display:none;"><div style="position:relative; margin-right:-10.5px; color:white;">x</div></button>
 
 </body>
 </html>
