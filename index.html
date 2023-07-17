@@ -12,45 +12,45 @@
 <script>
 $(document).ready(function(){
   $("#account").click(function(){
-    $("#account-pg").show();
+    $("#account-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
     $("#imp-link-btn-cls").hide();
-    $("#client-pg").hide();
-    $("#agency-pg").hide();
-    $("#pax-pg").hide();
+    $("#client-pg").css({"top":"100%"});
+    $("#agency-pg").css({"top":"100%"});
+    $("#pax-pg").css({"top":"100%"});
     $("#home-pg").hide();
     $("#imp-link-cont").hide();
   });
 
   $("#client").click(function(){
-    $("#client-pg").show();
+    $("#client-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
     $("#imp-link-btn-cls").hide();
-    $("#account-pg").hide();
-    $("#agency-pg").hide();
-    $("#pax-pg").hide();
+    $("#account-pg").css({"top":"100%"});
+    $("#agency-pg").css({"top":"100%"});
+    $("#pax-pg").css({"top":"100%"});
     $("#home-pg").hide();
     $("#imp-link-cont").hide();
   });
 
   $("#agency").click(function(){
-    $("#agency-pg").show();
+    $("#agency-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
     $("#imp-link-btn-cls").hide();
-    $("#account-pg").hide();
-    $("#client-pg").hide();
-    $("#pax-pg").hide();
+    $("#account-pg").css({"top":"100%"});
+    $("#client-pg").css({"top":"100%"});
+    $("#pax-pg").css({"top":"100%"});
     $("#home-pg").hide();
     $("#imp-link-cont").hide();
   });
 
   $("#pax").click(function(){
-    $("#pax-pg").show();
+    $("#pax-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
     $("#imp-link-btn-cls").hide();
-    $("#account-pg").hide();
-    $("#client-pg").hide();
-    $("#agency-pg").hide();
+    $("#account-pg").css({"top":"100%"});
+    $("#client-pg").css({"top":"100%"});
+    $("#agency-pg").css({"top":"100%"});
     $("#home-pg").hide();
     $("#imp-link-cont").hide();
   });
@@ -58,10 +58,10 @@ $(document).ready(function(){
   $("#home").click(function(){
     $("#home-pg").show();
     $("#imp-link-cont").show();
-    $("#account-pg").hide();
-    $("#client-pg").hide();
-    $("#pax-pg").hide();
-    $("#agency-pg").hide();
+    $("#account-pg").css({"top":"100%"});
+    $("#client-pg").css({"top":"100%"});
+    $("#pax-pg").css({"top":"100%"});
+    $("#agency-pg").css({"top":"100%"});
     $("#imp-link-btn").hide();
     $("#imp-link-btn-cls").hide();
   });
@@ -114,10 +114,10 @@ $(document).ready(function(){
 <div id="refresh" onclick="location.reload();" style="border:0px solid red; width:30px; height:30px; margin-top:5px; cursor:pointer; border-radius:15px; overflow:hidden;"><img src="https://cdn-icons-png.flaticon.com/512/189/189686.png" width="30" /></div>
 </div>
 
-<iframe id="account-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none; display:none;" src="https://docs.google.com/spreadsheets/d/12c2g0-V0T2J-2BQOtzJztsFrmxOAbq9qi3LexuE5sA8/edit?usp=sharing"></iframe>
-<iframe id="client-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none; display:none;" src="https://docs.google.com/spreadsheets/d/1lAg-2wLuCutLeqbfI0itWA53UFnzmcOWAnvAbtW2JCU/edit?usp=sharing"></iframe>
-<iframe id="agency-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none; display:none;" src="https://docs.google.com/spreadsheets/d/1pmVjivbCDJOIOzPhQN1OKCmQL1BeobXvPT69CFd1hek/edit?usp=sharing"></iframe>
-<iframe id="pax-pg" style="width:100%; height:100%; position:absolute; top:0px; left:0px; border:none; display:none;" src="https://docs.google.com/spreadsheets/d/1TCtAjoez5lPqV8TmZtao3mMlrQDaistYiJxVywXgP58/edit?usp=sharing"></iframe>
+<iframe id="account-pg" style="width:100%; height:100%; position:absolute; top:100%; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/12c2g0-V0T2J-2BQOtzJztsFrmxOAbq9qi3LexuE5sA8/edit?usp=sharing"></iframe>
+<iframe id="client-pg" style="width:100%; height:100%; position:absolute; top:100%; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/1lAg-2wLuCutLeqbfI0itWA53UFnzmcOWAnvAbtW2JCU/edit?usp=sharing"></iframe>
+<iframe id="agency-pg" style="width:100%; height:100%; position:absolute; top:100%; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/1pmVjivbCDJOIOzPhQN1OKCmQL1BeobXvPT69CFd1hek/edit?usp=sharing"></iframe>
+<iframe id="pax-pg" style="width:100%; height:100%; position:absolute; top:100%; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/1TCtAjoez5lPqV8TmZtao3mMlrQDaistYiJxVywXgP58/edit?usp=sharing"></iframe>
 
 <div id="imp-link-cont" style="position:absolute; top:0px; left:0px; border:0px solid green; width:250px; height:100%; box-shadow:4px 0px 7px #a9a9a9; background:#f3f3f3;">
 <div align="center" style="font-family:'Roboto Slab', serif; font-weight:normal; font-style:italic; font-size:17px; color:gray;"><br/>Important Links</div><hr style="border:3px solid lightgreen; border-radius:10px; width:60%;"/><br/>
