@@ -14,61 +14,39 @@ $(document).ready(function(){
   $("#account").click(function(){
     $("#account-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
-    $("#imp-link-btn-cls").hide();
-    $("#client-pg").css({"top":"-100%"});
-    $("#agency-pg").css({"top":"-100%"});
-    $("#pax-pg").css({"top":"-100%"});
-    $("#home-pg").hide();
-    $("#imp-link-cont").hide();
+    $("#imp-link-btn-cls, #home-pg, #imp-link-cont").hide();
+    $("#client-pg, #agency-pg, #pax-pg").css({"top":"-100%"});
   });
 
   $("#client").click(function(){
     $("#client-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
-    $("#imp-link-btn-cls").hide();
-    $("#account-pg").css({"top":"-100%"});
-    $("#agency-pg").css({"top":"-100%"});
-    $("#pax-pg").css({"top":"-100%"});
-    $("#home-pg").hide();
-    $("#imp-link-cont").hide();
+    $("#imp-link-btn-cls, #home-pg, #imp-link-cont").hide();
+    $("#account-pg, #agency-pg, #pax-pg").css({"top":"-100%"});
   });
 
   $("#agency").click(function(){
     $("#agency-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
-    $("#imp-link-btn-cls").hide();
-    $("#account-pg").css({"top":"-100%"});
-    $("#client-pg").css({"top":"-100%"});
-    $("#pax-pg").css({"top":"-100%"});
-    $("#home-pg").hide();
-    $("#imp-link-cont").hide();
+    $("#imp-link-btn-cls, #home-pg, #imp-link-cont").hide();
+    $("#account-pg, #client-pg, #pax-pg").css({"top":"-100%"});
   });
 
   $("#pax").click(function(){
     $("#pax-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
-    $("#imp-link-btn-cls").hide();
-    $("#account-pg").css({"top":"-100%"});
-    $("#client-pg").css({"top":"-100%"});
-    $("#agency-pg").css({"top":"-100%"});
-    $("#home-pg").hide();
-    $("#imp-link-cont").hide();
+    $("#imp-link-btn-cls, #home-pg, #imp-link-cont").hide();
+    $("#account-pg, #client-pg, #agency-pg").css({"top":"-100%"});
   });
 
   $("#home").click(function(){
-    $("#home-pg").show();
-    $("#imp-link-cont").show();
-    $("#account-pg").css({"top":"-100%"});
-    $("#client-pg").css({"top":"-100%"});
-    $("#pax-pg").css({"top":"-100%"});
-    $("#agency-pg").css({"top":"-100%"});
-    $("#imp-link-btn").hide();
-    $("#imp-link-btn-cls").hide();
+    $("#home-pg, #imp-link-cont").show();
+    $("#account-pg, #client-pg, #pax-pg, #agency-pg").css({"top":"-100%"});
+    $("#imp-link-btn, #imp-link-btn-cls").hide();
   });
 
   $("#imp-link-btn").click(function(){
-    $("#imp-link-cont").show(300);
-    $("#imp-link-btn-cls").show(300);
+    $("#imp-link-cont, #imp-link-btn-cls").show(300);
     $("#imp-link-btn").hide();
   });
 
