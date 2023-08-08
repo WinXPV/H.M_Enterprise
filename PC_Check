@@ -1,0 +1,6 @@
+<form action='https://pcc.police.gov.bd/ords/f' method='get' target='_blank'>
+	<input style="width:300px;" name='p' type='text'  class='ssc' value='500:50:::NO:RP:P50_TOKEN_ID:'/>
+
+<input style="cursor:pointer;" title='Search' class='ssc_submit' type='submit' value=' '/>
+
+	</form>
