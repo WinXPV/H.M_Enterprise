@@ -15,33 +15,69 @@ $(document).ready(function(){
     $("#account-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
     $("#imp-link-btn-cls, #home-pg, #imp-link-cont").hide();
-    $("#client-pg, #agency-pg, #pax-pg").css({"top":"-100%"});
+    $("#y-21-22-pg, #y-23-pg, #client-pg, #agency-pg, #pax-pg").css({"top":"-100%"});
+  });
+
+  $("#account, #prev-year").on({
+    mouseenter: function(){
+      $("#prev-year").css({"height":"85px"});
+      $("#y-21-22").css({"bottom":"60px", "color":"#717171"});
+      $("#y-23").css({"bottom":"36px", "color":"#717171"});
+    },  
+    mouseleave: function(){
+      $("#prev-year").css({"height":"30px"});
+      $("#y-21-22").css({"bottom":"0px", "color":"transparent"});
+      $("#y-23").css({"bottom":"0px", "color":"transparent"});
+    }
+  });
+
+  $("#y-21-22, #y-23").on({
+    mouseenter: function(){
+      $(this).css({"color":"IndianRed"});
+    },  
+    mouseleave: function(){
+      $(this).css({"color":"#717171"});
+    }
+  });
+
+  $("#y-21-22").click(function(){
+    $("#y-21-22-pg").css({"top":"0px"});
+    $("#imp-link-btn").show();
+    $("#imp-link-btn-cls, #home-pg, #imp-link-cont").hide();
+    $("#account-pg, #y-23-pg, #client-pg, #agency-pg, #pax-pg").css({"top":"-100%"});
+  });
+
+  $("#y-23").click(function(){
+    $("#y-23-pg").css({"top":"0px"});
+    $("#imp-link-btn").show();
+    $("#imp-link-btn-cls, #home-pg, #imp-link-cont").hide();
+    $("#account-pg, #y-21-22-pg, #client-pg, #agency-pg, #pax-pg").css({"top":"-100%"});
   });
 
   $("#client").click(function(){
     $("#client-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
     $("#imp-link-btn-cls, #home-pg, #imp-link-cont").hide();
-    $("#account-pg, #agency-pg, #pax-pg").css({"top":"-100%"});
+    $("#y-21-22-pg, #y-23-pg, #account-pg, #agency-pg, #pax-pg").css({"top":"-100%"});
   });
 
   $("#agency").click(function(){
     $("#agency-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
     $("#imp-link-btn-cls, #home-pg, #imp-link-cont").hide();
-    $("#account-pg, #client-pg, #pax-pg").css({"top":"-100%"});
+    $("#y-21-22-pg, #y-23-pg, #account-pg, #client-pg, #pax-pg").css({"top":"-100%"});
   });
 
   $("#pax").click(function(){
     $("#pax-pg").css({"top":"0px"});
     $("#imp-link-btn").show();
     $("#imp-link-btn-cls, #home-pg, #imp-link-cont").hide();
-    $("#account-pg, #client-pg, #agency-pg").css({"top":"-100%"});
+    $("#y-21-22-pg, #y-23-pg, #account-pg, #client-pg, #agency-pg").css({"top":"-100%"});
   });
 
   $("#home").click(function(){
     $("#home-pg, #imp-link-cont").show();
-    $("#account-pg, #client-pg, #pax-pg, #agency-pg").css({"top":"-100%"});
+    $("#y-21-22-pg, #y-23-pg, #account-pg, #client-pg, #pax-pg, #agency-pg").css({"top":"-100%"});
     $("#imp-link-btn, #imp-link-btn-cls").hide();
   });
 
@@ -59,11 +95,13 @@ $(document).ready(function(){
 </script>
 
 <style>
-.btn {z-index:1; position:fixed; bottom:60px; right:15px; border:0px solid red;}
-.btn button {cursor:pointer; margin-top:5px; font-size:16px; background:#717171; color:white; border-radius:17px 0px; border:2px solid #717171; padding:3px; font-family: 'Oswald', sans-serif;}
+.btn {z-index:2; position:fixed; bottom:60px; right:15px; border:0px solid red;}
+.btn button {cursor:pointer; margin-top:5px; font-size:16px; background:#717171; color:white; border-radius:17px 0px; border:2px solid #717171; padding:3px; font-family: 'Oswald', sans-serif; position:relative;}
 .btn button:hover {color:IndianRed; background:white; transition:0.2s; border:2px solid IndianRed; border-radius:0px 17px;}
 .btn button:focus {color:IndianRed; background:white; transition:0.2s; border:2px solid IndianRed; border-radius:0px 17px;}
 #refresh:hover {filter:grayscale(100%); transition:0.2s;}
+#prev-year {position:relative; border:0px green solid; right:0px; bottom:-38px; text-align:right; width:114px; height:30px; font-family: 'Oswald', sans-serif; transition:0.2s;}
+#y-21-22, #y-23 {position:absolute; bottom:0px; right:0px; border:0px blue solid; color:transparent; cursor:pointer; transition:0.2s;}
 
 .imp-link li {border:0px solid red; margin:5px; margin-left:-20px; padding:0px; font-family:'Roboto Condensed'; font-size:16px; overflow:hidden; height:18px;}
 .imp-link li a {border:0px solid green; display:block; margin-top:0px; margin-left:18px; cursor:pointer; text-decoration:none; color:#636363;}
@@ -85,6 +123,10 @@ $(document).ready(function(){
 </div>
 
 <div class="btn" align="right">
+<div id="prev-year">
+<div id="y-21-22">2021-22</div>
+<div id="y-23">2023</div>
+</div>
 <button id="account">Account Summary</button><br/>
 <button id="client">Client / Ref</button><br/>
 <button id="agency">Agency (Processing)</button><br/>
@@ -93,6 +135,8 @@ $(document).ready(function(){
 <div id="refresh" onclick="location.reload();" style="border:0px solid red; width:30px; height:30px; margin-top:5px; cursor:pointer; border-radius:15px; overflow:hidden;"><img src="https://cdn-icons-png.flaticon.com/512/189/189686.png" width="30" /></div>
 </div>
 
+<iframe id="y-21-22-pg" style="width:100%; height:100%; position:absolute; top:-100%; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/1fSZPU-yxNHLKx3LbS4pHUA_zhBdLcpkF7JkhOG1tBs0/edit?usp=sharing"></iframe>
+<iframe id="y-23-pg" style="width:100%; height:100%; position:absolute; top:-100%; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/12c2g0-V0T2J-2BQOtzJztsFrmxOAbq9qi3LexuE5sA8/edit?usp=sharing"></iframe>
 <iframe id="account-pg" style="width:100%; height:100%; position:absolute; top:-100%; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/1bUj_FwLPMsiPp7ccC2OxVF7cvyRfznRN_nDp1skli68/edit?usp=sharing"></iframe>
 <iframe id="client-pg" style="width:100%; height:100%; position:absolute; top:-100%; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/1lAg-2wLuCutLeqbfI0itWA53UFnzmcOWAnvAbtW2JCU/edit?usp=sharing"></iframe>
 <iframe id="agency-pg" style="width:100%; height:100%; position:absolute; top:-100%; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/1pmVjivbCDJOIOzPhQN1OKCmQL1BeobXvPT69CFd1hek/edit?usp=sharing"></iframe>
@@ -130,8 +174,8 @@ $(document).ready(function(){
 </ul>
 </div>
 
-<div id="imp-link-btn" style="z-index:2; position:absolute; bottom:0px; left:-11px; background:gray; width:20px; height:35px; border-radius:10px; cursor:pointer; display:none;"></div>
-<div id="imp-link-btn-cls" style="z-index:3; position:absolute; bottom:0px; left:-11px; background:IndianRed; width:20px; height:35px; border-radius:10px; cursor:pointer; display:none;"></div>
+<div id="imp-link-btn" style="z-index:3; position:absolute; bottom:0px; left:-11px; background:gray; width:20px; height:35px; border-radius:10px; cursor:pointer; display:none;"></div>
+<div id="imp-link-btn-cls" style="z-index:4; position:absolute; bottom:0px; left:-11px; background:IndianRed; width:20px; height:35px; border-radius:10px; cursor:pointer; display:none;"></div>
 
 </body>
 </html>
