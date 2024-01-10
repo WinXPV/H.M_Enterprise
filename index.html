@@ -20,23 +20,23 @@ $(document).ready(function(){
 
   $("#account, #prev-year").on({
     mouseenter: function(){
-      $("#prev-year").css({"height":"85px"});
-      $("#y-21-22").css({"bottom":"60px", "color":"#717171"});
-      $("#y-23").css({"bottom":"36px", "color":"#717171"});
+      $("#prev-year").css({"height":"105px"});
+      $("#y-21-22").css({"bottom":"75px", "color":"white", "border-radius":"5px", "background":"#717171"});
+      $("#y-23").css({"bottom":"38px", "color":"white", "border-radius":"5px", "background":"#717171"});
     },  
     mouseleave: function(){
       $("#prev-year").css({"height":"30px"});
-      $("#y-21-22").css({"bottom":"0px", "color":"transparent"});
-      $("#y-23").css({"bottom":"0px", "color":"transparent"});
+      $("#y-21-22").css({"bottom":"0px", "color":"transparent", "background":"transparent"});
+      $("#y-23").css({"bottom":"0px", "color":"transparent", "background":"transparent"});
     }
   });
 
   $("#y-21-22, #y-23").on({
     mouseenter: function(){
-      $(this).css({"color":"IndianRed"});
+      $(this).css({"background":"IndianRed"});
     },  
     mouseleave: function(){
-      $(this).css({"color":"#717171"});
+      $(this).css({"background":"#717171"});
     }
   });
 
@@ -101,7 +101,7 @@ $(document).ready(function(){
 .btn button:focus {color:IndianRed; background:white; transition:0.2s; border:2px solid IndianRed; border-radius:0px 17px;}
 #refresh:hover {filter:grayscale(100%); transition:0.2s;}
 #prev-year {position:relative; border:0px green solid; right:0px; bottom:-38px; text-align:right; width:114px; height:30px; font-family: 'Oswald', sans-serif; transition:0.2s;}
-#y-21-22, #y-23 {position:absolute; bottom:0px; right:0px; border:0px blue solid; color:transparent; cursor:pointer; transition:0.2s;}
+#y-21-22, #y-23 {position:absolute; bottom:0px; right:0px; border:0px blue solid; color:transparent; cursor:pointer; transition:0.2s; padding:3px;}
 
 .imp-link li {border:0px solid red; margin:5px; margin-left:-20px; padding:0px; font-family:'Roboto Condensed'; font-size:16px; overflow:hidden; height:18px;}
 .imp-link li a {border:0px solid green; display:block; margin-top:0px; margin-left:18px; cursor:pointer; text-decoration:none; color:#636363;}
