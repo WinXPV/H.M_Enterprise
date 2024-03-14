@@ -91,6 +91,19 @@ $(document).ready(function(){
     $("#imp-link-btn-cls").hide();
     $("#imp-link-btn").show(300);
   });
+
+
+
+  $("#btn-hide").click(function(){
+    $(".btn").css({"right":"-200px", "opacity":"0.1", "transition":"0.3s"});
+    $("#btn-show").css({"right":"15px", "transition":"0.3s"});
+  });
+  $("#btn-show").click(function(){
+    $(".btn").css({"right":"15px", "opacity":"1", "transition":"0.3s"});
+    $("#btn-show").css({"right":"-22px", "transition":"0.3s"}); 
+  });
+
+
 });
 </script>
 
@@ -129,11 +142,13 @@ $(document).ready(function(){
 </div>
 <button id="account">Account Summary</button><br/>
 <button id="client">Client / Ref</button><br/>
-<button id="agency">Agency (Processing)</button><br/>
+<button id="agency">Agency (Processing)</button><br/> 
 <button id="pax">Pax Record</button><br/>
 <button id="home">Home</button><br/>
-<div id="refresh" onclick="location.reload();" style="border:0px solid red; width:30px; height:30px; margin-top:5px; cursor:pointer; border-radius:15px; overflow:hidden;"><img src="https://cdn-icons-png.flaticon.com/512/189/189686.png" width="30" /></div>
+<div id="btn-hide" style="border:0px solid red; width:25px; height:25px; margin-top:5px; cursor:pointer; overflow:hidden;"><img src="https://i.imgur.com/UxcdVi9.png" width="20" /></div>
+<!--<div id="refresh" onclick="location.reload();" style="border:0px solid red; width:30px; height:30px; margin-top:5px; cursor:pointer; border-radius:15px; overflow:hidden;"><img src="https://cdn-icons-png.flaticon.com/512/189/189686.png" width="30" /></div>-->
 </div>
+<div id="btn-show" style="position:fixed; bottom:60px; right:-22px; border:0px solid red; width:20px; height:25px; margin-top:5px; cursor:pointer; overflow:hidden;"><img src="https://i.imgur.com/xrs5PSA.png" width="20" /></div>
 
 <iframe id="y-21-22-pg" style="width:100%; height:100%; position:absolute; top:-100%; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/1fSZPU-yxNHLKx3LbS4pHUA_zhBdLcpkF7JkhOG1tBs0/edit?usp=sharing"></iframe>
 <iframe id="y-23-pg" style="width:100%; height:100%; position:absolute; top:-100%; left:0px; border:none;" src="https://docs.google.com/spreadsheets/d/12c2g0-V0T2J-2BQOtzJztsFrmxOAbq9qi3LexuE5sA8/edit?usp=sharing"></iframe>
